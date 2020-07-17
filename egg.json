@@ -1,0 +1,14 @@
+{
+    "name": "std",
+    "description": "A decentralized mirror of Deno's Standard Modules",
+    "version": "0.0.1",
+    "entry": "./deno/std/version.ts",
+    "stable": false,
+    "unlisted": true,
+    "fmt": false,
+    "repository": "https://github.com/nestdotland/std",
+    "files": [
+        "./deno/std/**/*",
+        "./README.md"
+    ]
+}
