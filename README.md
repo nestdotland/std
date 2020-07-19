@@ -41,15 +41,6 @@ Don't import any symbol with an underscore prefix: `export function _baz() {}`.
 These elements are not considered part of the public API, thus no stability is
 guaranteed for them.
 
-## Documentation
-
-To browse documentation for modules:
-
-- Go to https://nest.land/package/std.
-- Click "Browse files" under the "Package info" card.
-- Append the route after "files" in the url to `x.nest.land/std@0.61.0/`.
-  - Ex: `x.nest.land/std@0.61.0/deno/std/http/mod.ts`
-
 ## Contributing
 
 deno_std is a loose port of [Go's standard library](https://golang.org/pkg/).
