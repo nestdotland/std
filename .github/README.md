@@ -38,4 +38,4 @@ This is a decentralized mirror of Deno's Standard Modules. The code itself is no
 
 Deno and Deno Standard Modules are licensed under the MIT license by the Deno authors. Please see [Deno's license](https://github.com/denoland/deno/blob/master/LICENSE) for more information.
 
-This repository is merely a redistribution medium and the code in this repo is licenced under the MIT license by the nest.land team. Please see [nest.lands's license](LICENSE) for more information.
+This repository is merely a redistribution medium and the code in this repo is licensed under the MIT license by the nest.land team. Please see [nest.land's license](LICENSE) for more information.
