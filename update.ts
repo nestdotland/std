@@ -26,7 +26,7 @@ const config: object = {
   "stable": false,
   "unlisted": true,
   "fmt": false,
-  "repository": "https://github.com/denoland/deno/tree/master/std",
+  "repository": "https://github.com/nestdotland/std",
   "files": [
     "./**/*",
     "./README.md",
