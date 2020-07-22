@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h3 align="center">nest.land - Standard Modules</h3>
+<h3 align="center">Standard Modules</h3>
 
 <p align="center">A decentralized mirror of Deno's Standard Modules</p>
 
