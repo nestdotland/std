@@ -1,0 +1,26 @@
+name: Ship
+
+on:
+  workflow_dispatch: # manual override
+  schedule:
+    - cron: "0 * * * *" # every hour
+
+jobs:
+  ship:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Deno repo
+        uses: actions/checkout@v2
+        with:
+          repository: "denoland/deno"
+          fetch-depth: 1
+          submodules: false
+
+      - name: Setup Deno
+        uses: denolib/setup-deno@v2
+
+      - name: Check and publish
+        run: |
+          deno run -A --unstable https://denopkg.com/nestdotland/eggs/mod.ts link --key ${{ secrets.NESTAPIKEY }}
+          cd ./std
+          deno run -A --unstable https://denopkg.com/nestdotland/std/update.ts
