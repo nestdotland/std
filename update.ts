@@ -3,8 +3,7 @@ import {
   writeJson,
 } from "https://deno.land/std@0.61.0/fs/mod.ts";
 
-// TODO: change to "./version.ts" in prod
-import { VERSION } from "http://denopkg.com/denoland/deno/std/version.ts";
+import { VERSION } from "./version.ts";
 
 const nestAPI = "https://x.nest.land/api/package/std";
 
@@ -17,8 +16,7 @@ const egg: any = await fetch(nestAPI)
 console.log("nest.land: ", egg);
 console.log("deno.land: ", VERSION);
 
-// TODO: change to egg in prod
-const diff: number = semver.compare("0.53.0", VERSION);
+const diff: number = semver.compare(egg, VERSION);
 
 const config: object = {
   "name": "std",
