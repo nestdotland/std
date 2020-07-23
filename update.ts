@@ -3,7 +3,7 @@ import {
   writeJson,
 } from "https://deno.land/std@0.61.0/fs/mod.ts";
 
-import { VERSION } from "./version.ts";
+import { VERSION } from "https://raw.githubusercontent.com/denoland/deno/std/0.61.0/std/version.ts";
 
 const nestAPI = "https://x.nest.land/api/package/std";
 
