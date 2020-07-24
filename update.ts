@@ -39,7 +39,7 @@ if (diff === 0) {
   Deno.exit(0);
 } else if (diff === 1) {
   // that's illegal!
-  console.log(
+  console.error(
     "\n\t[ERR]: I don't know how, but we are ahead of deno\n",
   );
   Deno.exit(1);
