@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://nest.land/">
+  <a href="https://nest.land/std">
     <img src="https://og.nest.land/std.png?fontSize=500px" alt="nest.land/std" width="250">
   </a>
 </p>
