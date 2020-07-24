@@ -1,7 +1,7 @@
 import * as semver from "https://deno.land/x/semver@v1.0.0/mod.ts";
 import {
   writeJson,
-} from "https://deno.land/std@0.61.0/fs/mod.ts";
+} from "https://x.nest.land/std@0.62.0/fs/mod.ts";
 
 import { VERSION } from "https://denopkg.com/denoland/deno/std/version.ts";
 
