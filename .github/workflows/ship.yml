@@ -21,6 +21,6 @@ jobs:
 
       - name: Check and publish
         run: |
-          deno run -A --unstable https://denopkg.com/nestdotland/eggs/mod.ts link --key ${{ secrets.NESTAPIKEY }}
+          deno run -A --unstable https://denopkg.com/nestdotland/eggs/mod.ts link ${{ secrets.NESTAPIKEY }}
           cd ./std
           deno run -A --unstable https://denopkg.com/nestdotland/std/update.ts

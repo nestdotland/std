@@ -1,7 +1,7 @@
 import * as semver from "https://deno.land/x/semver@v1.0.0/mod.ts";
 import {
   writeJson,
-} from "https://deno.land/std@0.61.0/fs/mod.ts";
+} from "https://x.nest.land/std@0.62.0/fs/mod.ts";
 
 import { VERSION } from "https://denopkg.com/denoland/deno/std/version.ts";
 
@@ -39,14 +39,14 @@ if (diff === 0) {
   Deno.exit(0);
 } else if (diff === 1) {
   // that's illegal!
-  console.log(
+  console.error(
     "\n\t[ERR]: I don't know how, but we are ahead of deno\n",
   );
   Deno.exit(1);
 } else if (diff === -1) {
   console.log("New version found!\nCreating config...");
   await writeJson("egg.json", config, { spaces: 2 });
-  console.log(`Publishing std@${egg}...`);
+  console.log(`Publishing std@${VERSION}...`);
   Deno.run({
     cmd: [
       "deno",
@@ -56,6 +56,7 @@ if (diff === 0) {
       "https://denopkg.com/nestdotland/eggs/mod.ts",
       "publish",
     ],
+    stdout: "piped"
   });
   Deno.exit(0);
 }
