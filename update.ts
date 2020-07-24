@@ -46,7 +46,7 @@ if (diff === 0) {
 } else if (diff === -1) {
   console.log("New version found!\nCreating config...");
   await writeJson("egg.json", config, { spaces: 2 });
-  console.log(`Publishing std@${egg}...`);
+  console.log(`Publishing std@${VERSION}...`);
   Deno.run({
     cmd: [
       "deno",
@@ -56,6 +56,7 @@ if (diff === 0) {
       "https://denopkg.com/nestdotland/eggs/mod.ts",
       "publish",
     ],
+    stdout: "piped"
   });
   Deno.exit(0);
 }
