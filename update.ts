@@ -3,7 +3,7 @@ import {
   writeJson,
 } from "https://x.nest.land/std@0.62.0/fs/mod.ts";
 
-import { VERSION } from "https://denopkg.com/denoland/deno/std/version.ts";
+import { VERSION } from "https://github.com/denoland/deno/raw/master/std/version.ts";
 
 const nestAPI = "https://x.nest.land/api/package/std";
 
@@ -53,7 +53,7 @@ if (diff === 0) {
       "run",
       "-A",
       "--unstable",
-      "https://denopkg.com/nestdotland/eggs/mod.ts",
+      "https://x.nest.land/eggs@0.2.1/mod.ts",
       "publish",
     ],
     stdout: "piped"
