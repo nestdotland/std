@@ -1,7 +1,5 @@
 import * as semver from "https://deno.land/x/semver@v1.0.0/mod.ts";
-import {
-  writeJson,
-} from "https://x.nest.land/std@0.62.0/fs/mod.ts";
+import { writeJson } from "https://x.nest.land/std@0.62.0/fs/mod.ts";
 
 import { VERSION } from "https://github.com/denoland/deno/raw/master/std/version.ts";
 
@@ -38,7 +36,7 @@ if (diff === 0) {
   console.log(`std@${egg} is already published`);
   Deno.exit(0);
 } else if (diff === 1) {
-  // that's illegal!
+  // wait, that's illegal!
   console.error(
     "\n\t[ERR]: I don't know how, but we are ahead of deno\n",
   );
@@ -55,8 +53,7 @@ if (diff === 0) {
       "--unstable",
       "https://x.nest.land/eggs@0.2.1/mod.ts",
       "publish",
-    ],
-    stdout: "piped"
+    ]
   });
   Deno.exit(0);
 }
