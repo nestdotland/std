@@ -17,22 +17,28 @@ This is a decentralized mirror of Deno's Standard Modules. The code itself is no
 ### Authors
 
 - [t8](https://github.com/t8) - Co-Founder, Frontend, & Project Management
-- [zorbyte](https://github.com/zorbyte) - Co-Founder, Advisor, Triager, & Code Quality Control
+- [zorbyte](https://github.com/zorbyte) - Co-Founder
 - [justablob](https://github.com/justablob) - Backend & CLI
 
 ### Core Team
 
 - [divy-work](https://github.com/divy-work) - Backend Manager
 - [maximousblk](https://github.com/maximousblk) - UX Manager
-- [martondev](https://github.com/MartonDev) - Frontend Manager
+- [martonlederer](https://github.com/martonlederer) - Frontend Manager
 - [oganexon](https://github.com/oganexon) - CLI Manager
 
 ### Contributors
 
 - [ebebbington](https://github.com/ebebbington)
 - [yg](https://github.com/yg)
-- [jletey](https://github.com/jletey)
+- [johnletey](https://github.com/johnletey)
 - [qu4k](https://github.com/Qu4k)
+- [keimeno](https://github.com/Keimeno)
+- [hermitsun](https://github.com/HermitSun)
+
+### Special Thanks
+
+- [Cedrik Boudreau](https://github.com/cedriking)
 
 ## License
 
