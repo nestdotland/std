@@ -27,6 +27,6 @@ jobs:
       - name: Check and publish
         run: |
           deno install -qA --unstable https://x.nest.land/eggs@0.3.2/eggs.ts
-          eggs link link ${{ secrets.NESTAPIKEY }}
+          eggs link ${{ secrets.NESTAPIKEY }}
           cd ./std
           deno run -A --unstable https://github.com/nestdotland/std/raw/master/update.ts
