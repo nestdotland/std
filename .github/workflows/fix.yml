@@ -1,0 +1,31 @@
+name: Fix
+
+on:
+  workflow_dispatch: # manual override
+
+jobs:
+  ship:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        tag: ["0.76.0", "0.77.0", "0.78.0", "0.79.0", "0.80.0", ]
+    
+    steps:
+      - name: Setup Deno repo
+        uses: actions/checkout@v2
+        with:
+          repository: "denoland/deno"
+          fetch-depth: 2
+          submodules: false
+          ref: ${{ matrix.tag }}
+
+      - name: Setup Deno
+        uses: denolib/setup-deno@v2
+        with:
+          deno-version: "v1.3.0"
+
+      - name: Check and publish
+        run: |
+          deno run -A --unstable https://x.nest.land/eggs@0.2.1/mod.ts link ${{ secrets.NESTAPIKEY }}
+          cd ./std
+          deno run -A --unstable https://github.com/nestdotland/std/raw/master/update.ts
