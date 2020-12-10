@@ -51,8 +51,10 @@ if (diff === 0) {
       "run",
       "-A",
       "--unstable",
-      "https://x.nest.land/eggs@0.2.1/mod.ts",
+      "https://x.nest.land/eggs@0.3.2/mod.ts",
       "publish",
+      "--no-check",
+      "--yes",
     ]
   });
   Deno.exit(0);
