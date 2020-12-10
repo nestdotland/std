@@ -47,11 +47,7 @@ if (diff === 0) {
   console.log(`Publishing std@${VERSION}...`);
   Deno.run({
     cmd: [
-      "deno",
-      "run",
-      "-A",
-      "--unstable",
-      "https://x.nest.land/eggs@0.3.2/mod.ts",
+      "eggs",
       "publish",
       "--no-check",
       "--yes",
