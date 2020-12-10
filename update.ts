@@ -37,13 +37,7 @@ if (diff === 0) {
   // this ain't it chief!
   console.log(`std@${egg} is already published`);
   Deno.exit(0);
-} else if (diff === 1) {
-  // wait, that's illegal!
-  console.error(
-    "\n\t[ERR]: I don't know how, but we are ahead of deno\n",
-  );
-  Deno.exit(1);
-} else if (diff === -1) {
+} else {
   console.log("New version found!\nCreating config...");
   await writeJson("egg.json", config, { spaces: 2 });
   console.log(`Publishing std@${VERSION}...`);
