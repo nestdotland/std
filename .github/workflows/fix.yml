@@ -22,10 +22,10 @@ jobs:
       - name: Setup Deno
         uses: denolib/setup-deno@v2
         with:
-          deno-version: "v1.3.0"
+          deno-version: "v1.5.4"
 
       - name: Check and publish
         run: |
-          deno run -A --unstable https://x.nest.land/eggs@0.2.1/mod.ts link ${{ secrets.NESTAPIKEY }}
+          deno run -A --unstable https://x.nest.land/eggs@0.3.2/mod.ts link ${{ secrets.NESTAPIKEY }}
           cd ./std
           deno run -A --unstable https://github.com/nestdotland/std/raw/master/update.ts
