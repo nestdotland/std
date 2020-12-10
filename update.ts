@@ -1,9 +1,7 @@
 import * as semver from "https://deno.land/x/semver@v1.0.0/mod.ts";
 import { writeJson } from "https://x.nest.land/std@0.62.0/fs/mod.ts";
 
-// import { VERSION } from "https://github.com/denoland/deno/raw/master/std/version.ts";
-
-const VERSION: string = String(Deno.args[0])
+import { VERSION } from "https://github.com/denoland/deno/raw/master/std/version.ts";
 
 const nestAPI = "https://x.nest.land/api/package/std";
 
