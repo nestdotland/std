@@ -8,7 +8,11 @@ const nestAPI = "https://x.nest.land/api/package/std";
 const egg: any = await fetch(nestAPI)
   .then((response) => response.json())
   .then((data) => {
-    return semver.clean(data.latestVersion.replace("std@", ""));
+    return data.packageUploadNames
+      .sort((v1: string, v2: string) => {
+        return semver.rcompare(v1.replace("std@", ""), v2.replace("std@", ""));
+      })[0]
+      .replace("std@", "");
   });
 
 console.log("nest.land: ", egg);
