@@ -29,11 +29,8 @@ const config: object = {
   "unlisted": true,
   "fmt": false,
   "repository": "https://github.com/nestdotland/std",
-  "ignore": [".git"],
-  "files": [
-    "./**/*",
-    "./README.md",
-  ],
+  "ignore": ["./.git/**/*"],
+  "files": ["./**/*"],
 };
 
 if (diff === 0) {
